@@ -1,0 +1,35 @@
+VPC is Virtual Private Cloud that is creating your own private network inside AWS service
+
+VPC :
+=====
+
+1. CIDR : Size of a network
+           
+2. SUBNETS ---subnet is available in one available zone but one available zone can have many subnets
+      1. Public subnets ---accessible to outside vpc	  
+	  2. Private subnets ----accessible with in the vpc
+	  
+	  subnet is always mapped with route table
+	  MAXIMUM 200 subnets are available in 1 VPC
+	  
+3. ROUTE ====MAX ROUTE TABLES IN 1 VPC IS 200
+    ==========================================
+    route table is attached to subnet
+	one route table can be attached to many subnets
+	
+	
+4. NACL
+5. IGW ----recieves and gives the outside and inside respectively
+6. NAT
+7. PEERING
+
+  I1(SUBNETS)--->RT1(IGW)---> GOOGLE.COM
+
+
+Public IP is not repeatable and is chargeable
+Private is repeatable
+
+when vpc is created default of following is created
+DRT
+DSG
+DNACL

@@ -1,0 +1,226 @@
+webserver
+ps
+=============================================
+what is web server and how to make a server as web server"
+
+webserver: means it responds to the web req and it will give response .
+web server we can acess from browser
+how to make a server as web-server:
+when i am giving ip adress i am not getting any-page.
+by default web browser send a req to 80 port numberof the server.
+ssh send req to 22 port number of server.
+https --- send a req 443.
+when ever we give req to server it not responding when responds that server 
+we want to install a piece of software.
+when we install web-server service it occupy tha one port number.
+
+so many web servers softwares are thers
+
+1) apache2/httpd
+2) tomact
+3) nginx
+
+what is the main purpose of this softwares: thare are responds to thae web-requests.
+these softwares are we can install linux machines and windows machines.
+=======================================================================
+how to install software to our machines.
+
+in ubuntu we can use apt-get or apt
+only adminstaroes install the softwares.
+
+apt-get update --each linux machines maintaine repositories in repositories 
+maintain free softwares files.
+when we excute apt-get update ------linux install updates files from repositories.
+when it fresh machine we can excute command .
+============================================================
+when ever we install any software into server we can depend documentations.
+
+to install softwares we can use 
+apt install software name 
+or we can check documentaions.
+  
+
+how to install java in ubuntu
+
+sudo apt update
+java -version
+sudo apt install default-jre
+java -version
+sudo apt install default-jdk
+javac -version
+================================================================
+in redhat we need subcription.
+i want to install awscli
+apt-get install awscli
+
+check version awscli --version
+
+i want to install phython
+
+apt install phthon.
+
+how to know python instal
+python --version.
+
+in linux we can use package or software.
+
+sudo cat f1----- means --non root user excuting cmd . but internally excutoing root user only
+
+that software ready to excute java programs when we install java software
+
+
+that software ready to excute awscli  cmds when we install awscli software
+
+
+that software ready to excute docker cmds when we install docker  software
+========================================================================
+
+i want to my server is make a web-server:
+we install webserver software in that server that server is called wed-server
+web server internally occupy one port number 
+
+apt-get install apache2: now this this software is act as a web-server
+this apache2 by default run's on 80 port number.
+all apache2 software config files are stored in /etc/ dir
+config means: port number related files .config files etc...
+how to check service running or not
+service apache2 status.
+http://ec2-3-239-170-95.compute-1.amazonaws.com:8100/ --apche runs on apache2 
+
+===================================================
+when we giving req to web server files is getting that file is phsically where 
+is located.
+that physical page path we can call it as application path.
+
+for apache2=== by default loc is /var/www/html.
+in this loc it will check index.html
+/var/www/html/index.html - -----when we browse the ip:80 by default apache2 excute index.html from /var/www/html
+
+
+http://ec2-54-221-55-61.compute-1.amazonaws.com/sumanth.html
+
+i created sumanth.html in /var/www/html
+by default we are not mention any page name it will automatically excute index.html
+i mention any page number it will search that file name in the /var/www/html.
+http://ec2-54-221-55-61.compute-1.amazonaws.com/dinesh.html
+it will check dinesh.html in /var/www/html/
+
+as per req we change page names.
+================================================================
+on port 80 process is running that processer taken req and excuting files on /var/www/html/
+how to change apache2 port number vim apache2.conf. 
+i change port number 80 to 8080. 
+
+http://ec2-54-221-55-61.compute-1.amazonaws.com:8080/index.html
+http://ec2-54-221-55-61.compute-1.amazonaws.com:8080/sumanth.html
+http://ec2-54-221-55-61.compute-1.amazonaws.com:8080/sumanth/sumanth.html  -- we can mention full path
+
+ip -- it goto machine os then we give port number what ever port number running that server 
+taken then it goto to config files it check which dir i want to go thaen it excute by default index.html
+other wise we give any page name it excute the that page.page is not their it will thorows error.
+
+https://www.airtel.in/prepaid-recharge
+http://ec2-54-221-55-61.compute-1.amazonaws.com/prepaid-recharge
+
+===================================================================
+
+by default tomcat server runs on 8080 
+we can change port in web.xml
+when we give tomact req it will try to excute file index.html from  /var/lib/tomcat9/webapps/ROOT/
+
+ /var/lib/tomcat9/webapps/ROOT/index.html
+
+http://ec2-54-221-55-61.compute-1.amazonaws.com:8000/shoaib
+
+we can change default loc of docement root in sites-enabled
+
+==============================
+in real-time we dont dnow that default path so we want to ask team mebers.
+
+==========================================================================
+
+tasks
+1) luanch ubuntu ec2-instance
+2) install mginx webserver software
+3) change page content
+4) install jenkins software-------8080
+5) install docker softwsre
+6) install ansible software
+=====================================================================
+apt-get update
+apt install nginx
+nginx -v
+nginx by default runs on 80 port number
+we are trying to send req to nginx server it is not acepting req means 
+first check running con or not then check security group inbound rule 80 open or not
+
+/usr/share/nginx/html     canging to /var/www/html/index.nginx-debian.html
+
+this files having owner root
+
+this ip adress there are mapped to our domain name.
+========================================================
+docker install on ubuntu follow steps on doc
+docker --version
+======================
+service will ocupy port number -- we can acess from out-side
+software not ocupy port number - it is not possible to acess from outside
+java is software we can acess go into server only
+-----------------------------------------------------------------------
+ansible installion check on doc install ansible on ubuntu
+if ansible installed check ansible --version
+============================================
+we are giving req to another macgine it is mandatory ip adress along with port number.
+
+it might be login req,it might be database req.
+==============================================================================
+
+we can login into remote machine
+username@ip:22+passwd or private and command ssh
+
+
+=========================================================
+end user send a req to server need ip:port
+end user giving req to server server is not responding 
+we can check
+1) service is installed or not
+2) service is running or not
+3) it might be sg problem
+=====================================================
+we can type some commandes how system knows that commnd .
+our point of you that is command but system point of that is file.
+that file is stored in any one location .
+so system will go and that loc that file is excuting.
+
+but
+how system will know file location.
+it will search all paths locations.
+we can check that all path locations.
+env virable PATH
+WE CAN print value echo $PATH
+echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+PATH is env var it will give all system searching locations
+every cmd is a piece of software. a piece of software we run that runs as a processer 
+that processer have pid unique id
+how to check process runnin in system using ps command.
+every processer excuting it will do some activity and it will died.
+bash is one processer it will have pid
+ps -aux --it will show all processers in system.
+processer occupy cpu,memory from where is started commnd info
+ps -u --it will show process running along with username.
+every cmd is a processar.
+
+ps -u    -- it will show curent user runs processer swowing
+ps
+ps -aux
+kill pid ---kill the process
+
+nginx processer running i want to kill process using kill pid(processer id of nginx)
+once cmd excuting that processer is started when rocesser task completed that processer id die
+
+every processer having utilizies cpu memory
+processer started by one user.
+who started processer that user only kill that process
+and root user will kill tha any user processer.
+kill -9 pid ---forcebully deleted .

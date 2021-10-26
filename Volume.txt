@@ -1,0 +1,23 @@
+Creating Volume:
+
+Create a Volume from Instance page
+After creating the volume attach the volume
+
+
+Make a file system:
+=====mkfs -t ext4 /dev/xvdf
+=====mkfs -t xfs /dev/xvdf
+
+Use the following command to mount the volume at the directory
+sudo mount /dev/xvdf /data====/data is the dircetory created by us manually
+
+view  disk usage
+
+df -hT /dev/xvda1
+
+to increase the volume 
+resize2fs /dev/xvdf ---- for  ext4 file system
+growpart /dev/xvdf ------ for xfs file system
+
+device_name mount_point file_system_type fs_mntops fs_freq fs_passno
+/dev/xvdh /data1 ext4 defaults,nofail        0       0
